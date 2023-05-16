@@ -152,10 +152,10 @@ body main {
     border: 1px solid #30363d;
     border-radius: 15px;
 }
-.reponame{
+
+.reponame {
     color: #2f80f5;
 }
-
 
 .repo__item {
     width: 450px;
@@ -184,6 +184,85 @@ body main {
 
     color: #7d8590;
 }
+/* search input */
+.container-2 {
+    position: relative;
+
+    width: 300px;
+
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.container-2 input#search {
+    font-size: 10pt;
+
+    float: left;
+
+    width: 47px;
+    height: 50px;
+    padding-left: 50px;
+
+    -webkit-transition: width .55s ease;
+    -moz-transition: width .55s ease;
+    -ms-transition: width .55s ease;
+    -o-transition: width .55s ease;
+    transition: width .55s ease;
+
+    color: #262626;
+    color: #fff;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #2b303b;
+}
+
+.container-2 input#search::-webkit-input-placeholder {
+    color: #65737e;
+}
+
+.container-2 input#search:-moz-placeholder /* Firefox 18- */ { /* Firefox 18- */
+    color: #65737e;
+}
+
+.container-2 input#search::-moz-placeholder /* Firefox 19+ */ { /* Firefox 19+ */
+    color: #65737e;
+}
+
+.container-2 input#search:-ms-input-placeholder {
+    color: #65737e;
+}
+
+.container-2 .icon {
+    position: absolute;
+    z-index: 1;
+
+    margin-top: 9px;
+
+    /* top: 50%; */
+
+    margin-left: 7px;
+
+    color: #4f5b66;
+}
+
+.container-2 input#search:focus,
+.container-2 input#search:active {
+    width: 300px;
+
+    outline: none;
+}
+
+.container-2:hover input#search {
+    width: 300px;
+    padding-right: 0.5rem;
+}
+
+.container-2:hover .icon {
+    color: #93a2ad;
+}
+
 
 /* Media */
 

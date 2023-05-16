@@ -35,7 +35,7 @@
           data-selected-links="repositories /imartinez?tab=repositories"
           href="index.html"
         >
-          <img src="icn/repos.svg" alt="" />
+          <img class="nav_icon" src="icn/repos.svg" alt="" />
 
           Repositories
         </a>
@@ -48,53 +48,70 @@
           data-selected-links="projects /imartinez?tab=projects"
           href="#"
         >
-          <img src="icn/vs.svg" alt="" />
+          <img class="nav_icon" src="icn/vs.svg" alt="" />
 
           Competition
-          <span
-            title="0"
-            hidden="hidden"
-            data-view-component="true"
-            class="Counter"
-            >0</span
-          >
         </a>
       </nav>
     </header>
-    <main class="container d-flex">
+    <main class="mainn container d-flex">
       <img id="VS_img" src="imgs/VS.jpg" alt="" />
       <section class="left_section col-6 d-flex flex-column align-items-center">
-        <input class="search_input" placeholder="Search" type="text" />
-        <img class="my_img" src="imgs/hakam.jpeg" alt="" />
-        <div class="repo__item">
-          <div class="name">
-            <p>username</p>
-          </div>
-          <div class="info">
-            <p>Followers:</p>
-            <p>Following:</p>
-            <p>Public Repos:</p>
-          </div>
+        <form class="d-flex" role="search" action="javascript:void(0)">
+        
+        <!-- <input class="search_input" placeholder="Search" type="text" /> -->
+        <div class="container-2">
+          <span class="icon"><img src="icn/search.svg" alt="" /></span>
+          <input
+            type="search"
+            id="search"
+            class="search__input_left"
+            placeholder="Search or jump to..."
+          />
+        </div>
+        </form>
+        <div class="left_container">
+          <!-- <img class="my_img" src="imgs/hakam.jpeg" alt="" />
+          <div class="repo__item">
+            <div class="name">
+              <p>username</p>
+            </div>
+            <div class="info">
+              <p>Followers:</p>
+              <p>Following:</p>
+              <p>Public Repos:</p>
+            </div>
+          </div> -->
         </div>
       </section>
       <section
         class="right_section col-6 d-flex flex-column align-items-center"
       >
-        <input class="search_input" placeholder="Search" type="text" />
-        <img class="my_img" src="imgs/hakam.jpeg" alt="" />
-        <div class="repo__item">
-          <div class="name">
-            <p>username</p>
-          </div>
-          <div class="info">
-            <p>Followers:</p>
-            <p>Following:</p>
-            <p>Public Repos:</p>
-            <!-- <h5 class="public">Public</h5> -->
-          </div>
-          <!-- <h5 class="language">HTML</h5> -->
+        <!-- <input class="search_input" placeholder="Search" type="text" /> -->
+        <div class="container-2">
+          <span class="icon"><img src="icn/search.svg" alt="" /></span>
+          <input
+            type="search"
+            id="search"
+            class="search__input_right"
+            placeholder="Search or jump to..."
+          />
+        </div>
+        <div class="right_container">
+          <!-- <img class="my_img" src="imgs/hakam.jpeg" alt="" />
+          <div class="repo__item">
+            <div class="name">
+              <p>username</p>
+            </div>
+            <div class="info">
+              <p>Followers:</p>
+              <p>Following:</p>
+              <p>Public Repos:</p>
+            </div>
+          </div> -->
         </div>
       </section>
     </main>
+    <script src="js/compare.js"></script>
   </body>
 </html>

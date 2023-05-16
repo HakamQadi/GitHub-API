@@ -6,15 +6,18 @@
 }
 
 .body {
-    /* background-color: #0d1117; */
+    background-color: #0d1117;
 }
 
 .my_img {
     width: 15rem;
+    margin-left: 5rem;
 
     border-radius: 50%;
 }
-
+.VS_img:hover{
+transform: scale(1.5);
+}
 .public {
     width: 80px;
     height: 29px;
@@ -165,6 +168,95 @@ border-bottom: 2px solid red;
     flex-direction: column;
 }
 
+.nav_icon {
+    margin-right: 1rem;
+}
+
+/* search input */
+
+.container-2 {
+    position: relative;
+
+    width: 300px;
+
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.container-2 input#search {
+    font-size: 10pt;
+
+    /* float: unset; */
+
+    width: 300px;
+    height: 50px;
+    margin-bottom: 4rem;
+    margin-left: 1rem;
+    padding-left: 50px;
+
+    -webkit-transition: width .55s ease;
+    -moz-transition: width .55s ease;
+    -ms-transition: width .55s ease;
+    -o-transition: width .55s ease;
+    transition: width .55s ease;
+
+    color: #262626;
+    color: #fff;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #2b303b;
+}
+
+.container-2 input#search::-webkit-input-placeholder {
+    color: #65737e;
+}
+
+.container-2 input#search:-moz-placeholder /* Firefox 18- */ { /* Firefox 18- */
+    color: #65737e;
+}
+
+.container-2 input#search::-moz-placeholder /* Firefox 19+ */ { /* Firefox 19+ */
+    color: #65737e;
+}
+
+.container-2 input#search:-ms-input-placeholder {
+    color: #65737e;
+}
+
+.container-2 .icon {
+    position: absolute;
+    position: absolute;
+    z-index: 1;
+
+    margin-top: 9px;
+
+    /* top: 50%; */
+
+    margin-left: 1.5rem;
+
+    color: #4f5b66;
+}
+
+.container-2 input#search:focus,
+.container-2 input#search:active {
+    width: 300px;
+
+    outline: none;
+}
+
+/*
+.container-2:hover input#search {
+    width: 300px;
+    padding-right: 0.5rem;
+}
+*/
+
+.container-2:hover .icon {
+    color: #93a2ad;
+}
+
 /* media */
 
 @media(max-width: 1440px) {
@@ -178,7 +270,7 @@ border-bottom: 2px solid red;
 @media(max-width: 1024px) {
     #VS_img {
         position: absolute;
-        top: 21rem;
+        top: 27rem;
         left: 27rem;
     }
 
@@ -194,7 +286,7 @@ border-bottom: 2px solid red;
 @media(max-width: 768px) {
     #VS_img {
         position: absolute;
-        top: 21rem;
+        top: 19rem;
         left: 20.8rem;
 
         width: 6rem;
@@ -228,6 +320,17 @@ border-bottom: 2px solid red;
         font-size: 1.7rem;
         font-weight: bolder;
     }
+
+    .container-2 input#search {
+        font-size: 8pt;
+
+        width: 162px;
+        margin-left: 4rem;
+    }
+
+    .container-2 .icon {
+        margin-left: 4.5rem;
+    }
 }
 
 /* Styling the input field */
@@ -248,19 +351,19 @@ border-bottom: 2px solid red;
 
 .search_input:focus {
     /* border-color: #5b9dd9; */
-    border: none;   
-    outline: none;
-    
+
+    border: none;
     border-bottom: 2px solid #f7f7f7;
-    
+    outline: none;
     background-color: #ccc;
 }
 
 @media(max-width: 425px) {
     #VS_img {
         position: absolute;
-        top: 20rem;
-        left: 11.9rem;
+        position: absolute;
+        top: 17rem;
+        left: 13rem;
 
         width: 3rem;
     }
@@ -294,22 +397,58 @@ border-bottom: 2px solid red;
     .search_input {
         width: 7rem;
     }
+
+    .container {
+        margin-left: 1.5rem!important;
+    }
 }
 
 @media(max-width: 375px) {
     #VS_img {
         position: absolute;
-        top: 20rem;
+        top: 17rem;
         left: 10.2rem;
 
         width: 3rem;
+    }
+
+    .container {
+        margin-left: 0rem !important;
+    }
+
+/*
+#sub_nav {
+        margin-left: 5rem;
+}
+*/
+
+    .container-2 {
+        position: relative;
+
+        /* margin-right: 4rem; */
+
+        width: 150px;
+
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+
+    .container-2 input#search {
+        font-size: 8pt;
+
+        width: 162px;
+        margin-left: -0.5rem;
+    }
+
+    .container-2 .icon {
+        margin-left: -0.1rem;
     }
 }
 
 @media(max-width: 320px) {
     #VS_img {
         position: absolute;
-        top: 20rem;
+        top: 17rem;
         left: 8.4rem;
 
         width: 3rem;
@@ -333,5 +472,17 @@ border-bottom: 2px solid red;
     .left_section .info,
     .right_section .info {
         font-size: 0.6rem;
+    }
+
+    .container-2 input#search {
+        font-size: 7pt;
+
+        width: 125px;
+        margin-left: 0.5rem;
+        padding-left: 32px;
+    }
+
+    .container-2 .icon {
+        margin-left: 0.5rem;
     }
 }
