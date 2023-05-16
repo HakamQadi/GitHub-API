@@ -15,9 +15,11 @@
 
     border-radius: 50%;
 }
-.VS_img:hover{
-transform: scale(1.5);
+
+.VS_img:hover {
+    transform: scale(1.5);
 }
+
 .public {
     width: 80px;
     height: 29px;
@@ -281,6 +283,13 @@ border-bottom: 2px solid red;
     .right_section .repo__item {
         width: 20rem;
     }
+
+    .my_img {
+        width: 15rem;
+        margin-left: 1rem;
+
+        border-radius: 50%;
+    }
 }
 
 @media(max-width: 768px) {
@@ -294,6 +303,7 @@ border-bottom: 2px solid red;
 
     .my_img {
         width: 10rem;
+        margin-left: 2rem;
 
         border-radius: 50%;
     }
@@ -370,6 +380,7 @@ border-bottom: 2px solid red;
 
     .my_img {
         width: 6rem;
+        margin-left: 2rem;
 
         border-radius: 50%;
     }
@@ -484,5 +495,12 @@ border-bottom: 2px solid red;
 
     .container-2 .icon {
         margin-left: 0.5rem;
+    }
+
+    .my_img {
+        width: 6rem;
+        margin-left: 0rem;
+
+        border-radius: 50%;
     }
 }

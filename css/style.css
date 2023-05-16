@@ -184,7 +184,9 @@ body main {
 
     color: #7d8590;
 }
+
 /* search input */
+
 .container-2 {
     position: relative;
 
@@ -262,7 +264,6 @@ body main {
 .container-2:hover .icon {
     color: #93a2ad;
 }
-
 
 /* Media */
 
@@ -357,4 +358,223 @@ body main {
 
         border-radius: 50%;
     }
+}
+
+/* light mode */
+
+.light-mode {
+    background-color: #f5f5f5;
+}
+
+.light-mode .icons {
+    display: flex;
+}
+
+.light-mode .UnderlineNav-body {
+    display: flex;
+    align-items: center;
+
+    min-height: 48px;
+
+    list-style: none;
+}
+
+.light-mode .UnderlineNav-item {
+    font-size: 14px;
+    line-height: 30px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 8px;
+
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+
+    color: #333333;
+    border: 0;
+    border-radius: 6px;
+    background-color: initial;
+}
+
+.light-mode .UnderlineNav-item:hover {
+    transition: border-bottom-color .12s ease-out6;
+    text-decoration: none;
+
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    outline-offset: -2px;
+    background-color: #f0f0f0;
+}
+
+.light-mode body a {
+    text-decoration: none;
+}
+
+.light-mode body a img {
+    margin-right: 1rem;
+}
+
+.light-mode body main {
+    display: flex;
+}
+
+.light-mode #nav_section {
+    display: flex;
+    justify-content: center
+}
+
+.light-mode #myImg {
+    width: 20.3rem;
+
+    border-radius: 50%;
+}
+
+.light-mode #icon_people {
+    margin: 0;
+    padding: 0;
+}
+
+.light-mode .profile button {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    color: #333333;
+    border: 1px solid #e2e2e2;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.light-mode .profile button:hover {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    color: #333333;
+    border: 1px solid #e2e2e2;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+.light-mode .repo {
+    display: flex;
+}
+
+.light-mode #row {
+    border: 1px solid black;
+    background-color: red;
+}
+
+.light-mode .public {
+    width: 80px;
+    height: 29px;
+
+    text-align: center;
+
+    border: 1px solid #e2e2e2;
+    border-radius: 15px;
+}
+
+.light-mode .reponame {
+    color: #2f80f5;
+}
+
+.light-mode .repo__item {
+    width: 450px;
+    height: 120px;
+    margin-top: 41px;
+    margin-left: -15px;
+    padding: 20px;
+
+    color: #333333;
+    border: 1px solid #e2e2e2;
+}
+
+.light-mode .repo__item div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.light-mode .language {
+    margin-top: 25px;
+
+    color: #333333;
+}
+
+.light-mode .container-2 {
+    position: relative;
+
+    width: 300px;
+
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.light-mode .container-2 input#search {
+    font-size: 10pt;
+
+    float: left;
+
+    width: 47px;
+    height: 50px;
+    padding-left: 50px;
+
+    -webkit-transition: width .55s ease;
+    -moz-transition: width .55s ease;
+    -ms-transition: width .55s ease;
+    -o-transition: width .55s ease;
+    transition: width .55s ease;
+
+    color: #262626;
+    color: #000000;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #f0f0f0;
+}
+
+.light-mode .container-2 input#search::-webkit-input-placeholder {
+    color: #65737e;
+}
+
+.container-2 input#search:-moz-placeholder {
+    color: #65737e;
+}
+
+.light-mode .container-2 input#search::-moz-placeholder {
+    color: #65737e;
+}
+
+.light-mode .container-2 input#search:-ms-input-placeholder {
+    color: #65737e;
+}
+
+.light-mode .container-2 .icon {
+    position: absolute;
+    z-index: 1;
+
+    margin-top: 9px;
+    margin-left: 7px;
+
+    color: #4f5b66;
+}
+
+.light-mode .container-2 input#search:focus,
+.container-2 input#search:active {
+    width: 300px;
+
+    outline: none;
+}
+
+.light-mode .container-2:hover input#search {
+    width: 300px;
+    padding-right: 0.5rem;
+}
+
+.light-mode .container-2:hover .icon {
+    color: #93a2ad;
 }

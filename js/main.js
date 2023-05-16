@@ -82,7 +82,9 @@ searchInput.addEventListener("keyup", function (event) {
           `
           }
 
+
         });
+        reposSection.innerHTML = ""
       })
       .catch((error) => {
         console.error(error);
