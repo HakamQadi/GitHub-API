@@ -1,7 +1,6 @@
 let searchInput = document.querySelector(".search__input");
 let clientId = "987534eb2d868e67daf9"
 let clientSecrets = "d148aeea12d7f0d852a03eeaf01f123e84ed722b"
-// let URL = `https://api.github.com/search/users?q=${search}&client_id=${clientId}&client_secret=${clientSecrets}`
 
 
 let myName;
@@ -55,8 +54,6 @@ searchInput.addEventListener("keyup", function (event) {
         `;
 
 
-          // console.log(followers)
-          // console.log(following)
 
         });
 

@@ -32,10 +32,9 @@ face.addEventListener("click", () => {
         duration: 1050
     });
 
-    // Add toggleLightMode() function to the timeline
     tl.add(
         {
-            begin: toggleLightMode, // Execute toggleLightMode() at the beginning of the animation
+            begin: toggleLightMode, 
         },
         500
 
@@ -91,7 +90,6 @@ face.addEventListener("click", () => {
             "-=1210"
         );
 
-    // Remove the if-else conditions and directly update the switched variable
     switched = !switched;
 
     if (switchBG.classList.contains("on-shadow")) {

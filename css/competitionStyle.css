@@ -38,22 +38,12 @@
     border-radius: 15px;
 }
 
-/*
-.reponame{
-    color: #2f80f5;
-}
-*/
-
 .left_section {
     margin-top: 10rem;
-
-    /* background-color: red; */
 }
 
 .right_section {
     margin-top: 10rem;
-
-    /* background-color: yellow; */
 }
 
 .search_input {
@@ -69,10 +59,6 @@ body a {
     align-items: center;
 
     margin-top: 1rem;
-
-    /* height: 2rem; */
-
-    /* gap: 1rem; */
 
     place-content: center;
 }
@@ -102,23 +88,13 @@ body a {
     transition: border-bottom-color .12s ease-out6;
     text-decoration: none;
 
-    /* color: yellow; */
-
     border-bottom-color: rgba(175, 184, 193, 0.2);
     outline-offset: -2px;
     background-color: #7d85909c;
-
-/*
-border-bottom: 2px solid red;
-    border-radius: 0;
-*/
 }
 
 .left_section .repo__item {
     width: 450px;
-
-    /* height: 120px; */
-
     margin-top: 41px;
     margin-left: -15px;
     padding: 20px;
@@ -130,9 +106,6 @@ border-bottom: 2px solid red;
 
 .right_section .repo__item {
     width: 450px;
-
-    /* height: 120px; */
-
     margin-top: 41px;
     margin-left: -15px;
     padding: 20px;
@@ -196,8 +169,6 @@ border-bottom: 2px solid red;
 .container-2 input#search {
     font-size: 10pt;
 
-    /* float: unset; */
-
     width: 300px;
     height: 50px;
     margin-bottom: 4rem;
@@ -241,9 +212,6 @@ border-bottom: 2px solid red;
     z-index: 1;
 
     margin-top: 9px;
-
-    /* top: 50%; */
-
     margin-left: 1.5rem;
 
     color: #4f5b66;
@@ -255,13 +223,6 @@ border-bottom: 2px solid red;
 
     outline: none;
 }
-
-/*
-.container-2:hover input#search {
-    width: 300px;
-    padding-right: 0.5rem;
-}
-*/
 
 .container-2:hover .icon {
     color: #93a2ad;
@@ -382,8 +343,6 @@ border-bottom: 2px solid red;
 /* Styling the input field when it is in focus */
 
 .search_input:focus {
-    /* border-color: #5b9dd9; */
-
     border: none;
     border-bottom: 2px solid #f7f7f7;
     outline: none;
@@ -456,16 +415,8 @@ border-bottom: 2px solid red;
         margin-left: 0rem !important;
     }
 
-/*
-#sub_nav {
-        margin-left: 5rem;
-}
-*/
-
     .container-2 {
         position: relative;
-
-        /* margin-right: 4rem; */
 
         width: 150px;
 
@@ -540,8 +491,6 @@ border-bottom: 2px solid red;
         color: #fff;
     }
 }
-
-/* celepration animation */
 
 .confetti {
     position: absolute;
