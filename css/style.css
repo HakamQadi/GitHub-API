@@ -252,6 +252,9 @@ body main {
 
         border-radius: 50%;
     }
+    .explore{
+        display: none !important;
+    }
 }
 
 @media(max-width: 768px) {
@@ -320,6 +323,13 @@ body main {
         width: 9.5rem;
 
         border-radius: 50%;
+    }
+    .public {
+        width: 57px;
+        height: 20px;
+        text-align: center;
+        border: 1px solid #30363d;
+        border-radius: 15px;
     }
 }
 
