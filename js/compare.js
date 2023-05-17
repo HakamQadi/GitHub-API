@@ -11,6 +11,8 @@ let profileImg;
 let leftContainer = document.querySelector(".left_container")
 let rightContainer = document.querySelector(".right_container")
 let VS = document.getElementById("VS_img")
+let leftResult = document.getElementById("left_result")
+let rightResult = document.getElementById("right_result")
 
 let leftRepoCount
 let rightRepoCount
@@ -25,13 +27,15 @@ searchInputLeft.addEventListener("keyup", function (event) {
             .then((data) => {
                 let profileInfo = data.items[0].url
                 fetch(profileInfo).then((respon) => respon.json()).then((data) => {
-                    myName = data.name;
+                    myName = data.login;
                     followers = data.followers;
                     following = data.following;
                     profileImg = data.avatar_url;
                     reposCount = data.public_repos;
                     leftRepoCount = reposCount;
-                    leftContainer.innerHTML = `<img class="my_img" src=${profileImg} alt="" />
+                    leftContainer.innerHTML = `
+                    <h1 id="left_result"></h1>
+                    <img class="my_img" src=${profileImg} alt="" />
                     <div class="repo__item">
                       <div class="name">
                         <p>${myName}</p>
@@ -59,14 +63,16 @@ searchInputRight.addEventListener("keyup", function (event) {
             .then((data) => {
                 let profileInfo = data.items[0].url
                 fetch(profileInfo).then((respon) => respon.json()).then((data) => {
-                    myName = data.name;
+                    myName = data.login;
                     followers = data.followers;
                     following = data.following;
                     profileImg = data.avatar_url;
                     reposCount = data.public_repos;
                     rightRepoCount = reposCount;
 
-                    rightContainer.innerHTML = `<img class="my_img" src=${profileImg} alt="" />
+                    rightContainer.innerHTML = `
+                    <h1 id="right_result"></h1>
+                    <img class="my_img" src=${profileImg} alt="" />
                     <div class="repo__item">
                       <div class="name">
                         <p>${myName}</p>
@@ -86,11 +92,17 @@ searchInputRight.addEventListener("keyup", function (event) {
 })
 
 VS.addEventListener("click", () => {
+    let leftResult = document.getElementById("left_result")
+    let rightResult = document.getElementById("right_result")
     if (leftRepoCount > rightRepoCount) {
         console.log("left win");
+        leftResult.textContent = "Winner"
+        rightResult.textContent = "Losser"
     }
-    else {
+    else if (leftRepoCount < rightRepoCount) {
         console.log("right win");
+        rightResult.textContent = "Winner"
+        leftResult.textContent = "Losser"
 
     }
 })

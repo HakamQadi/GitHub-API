@@ -9,6 +9,13 @@
     background-color: #0d1117;
 }
 
+#left_result,#right_result {
+    margin-bottom: 3rem;
+    margin-left: 8.5rem;
+
+    color: #fff;
+}
+
 .my_img {
     width: 15rem;
     margin-left: 5rem;
@@ -290,6 +297,11 @@ border-bottom: 2px solid red;
 
         border-radius: 50%;
     }
+    #result {
+        margin-bottom: 3rem;
+        margin-left: 5.5rem;
+        color: #fff;
+    }
 }
 
 @media(max-width: 768px) {
@@ -340,6 +352,11 @@ border-bottom: 2px solid red;
 
     .container-2 .icon {
         margin-left: 4.5rem;
+    }
+    #result {
+        margin-bottom: 3rem;
+        margin-left: 3.5rem;
+        color: #fff;
     }
 }
 
@@ -411,6 +428,11 @@ border-bottom: 2px solid red;
 
     .container {
         margin-left: 1.5rem!important;
+    }
+    #result {
+        margin-bottom: 3rem;
+        margin-left: 2.5rem;
+        color: #fff;
     }
 }
 
@@ -499,8 +521,13 @@ border-bottom: 2px solid red;
 
     .my_img {
         width: 6rem;
-        margin-left: 0rem;
+        margin-left: 0.5rem;
 
         border-radius: 50%;
+    }
+    #result {
+        margin-bottom: 3rem;
+        margin-left: 1rem;
+        color: #fff;
     }
 }
