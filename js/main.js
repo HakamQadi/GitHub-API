@@ -31,7 +31,7 @@ searchInput.addEventListener("keyup", function (event) {
           profileImg = data.avatar_url;
           // myImg.setAttribute("src", profileImg)
           profileSection.innerHTML = `<img id="myImg" src=${profileImg} alt="" />
-                    <h3 style="color: white">${myName}</h3>
+                    <h3 id="my_name">${myName}</h3>
         <p style="color: rgb(99, 97, 97)">${username}</p>
         <button>Follow</button>
         <div class="mb-3">
@@ -40,7 +40,7 @@ searchInput.addEventListener("keyup", function (event) {
             href="https://github.com/imartinez?tab=followers"
           >
             <img id="icon_people" src="icn/people.svg" alt="" />
-            <span class="text-white text-bold color-fg-default">${followers}</span>
+            <span class="text-bold color-fg-default profile_following">${followers}</span>
             followers
           </a>
           ·
@@ -48,7 +48,7 @@ searchInput.addEventListener("keyup", function (event) {
             class="text-secondary Link--secondary no-underline no-wrap"
             href="https://github.com/imartinez?tab=following"
           >
-            <span class="text-white text-bold color-fg-default">${following}</span>
+            <span class="text-bold color-fg-default profile_following">${following}</span>
             following
           </a>
         </div>
@@ -67,7 +67,7 @@ searchInput.addEventListener("keyup", function (event) {
             reposSection.innerHTML += `
                         <div
           id="repos_sectios"
-          class="row row-cols-1 row-cols-md-2 g-4 col-mid-5"
+          class="row row-cols-1 row-cols-md-2 g-4 col-mid-5 gap-4"
         >
           <div class="col">
             <div class="repo__item">
@@ -91,3 +91,8 @@ searchInput.addEventListener("keyup", function (event) {
       })
   }
 })
+
+
+
+
+

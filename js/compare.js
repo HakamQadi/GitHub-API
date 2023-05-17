@@ -19,21 +19,20 @@ let rightRepoCount
 
 
 
-searchInputLeft.addEventListener("keyup", function (event) {
-    if (event.keyCode == 13) {
-        let search = searchInputLeft.value;
-        fetch(`https://api.github.com/search/users?q=${search}&client_id=${clientId}&client_secret=${clientSecrets}`)
-            .then((response) => response.json())
-            .then((data) => {
-                let profileInfo = data.items[0].url
-                fetch(profileInfo).then((respon) => respon.json()).then((data) => {
-                    myName = data.login;
-                    followers = data.followers;
-                    following = data.following;
-                    profileImg = data.avatar_url;
-                    reposCount = data.public_repos;
-                    leftRepoCount = reposCount;
-                    leftContainer.innerHTML = `
+searchInputLeft.addEventListener("input", function (event) {
+    let search = searchInputLeft.value;
+    fetch(`https://api.github.com/search/users?q=${search}&client_id=${clientId}&client_secret=${clientSecrets}`)
+        .then((response) => response.json())
+        .then((data) => {
+            let profileInfo = data.items[0].url
+            fetch(profileInfo).then((respon) => respon.json()).then((data) => {
+                myName = data.login;
+                followers = data.followers;
+                following = data.following;
+                profileImg = data.avatar_url;
+                reposCount = data.public_repos;
+                leftRepoCount = reposCount;
+                leftContainer.innerHTML = `
                     <h1 id="left_result"></h1>
                     <img class="my_img" src=${profileImg} alt="" />
                     <div class="repo__item">
@@ -46,31 +45,29 @@ searchInputLeft.addEventListener("keyup", function (event) {
                         <p>Public Repos: ${leftRepoCount}</p>
                       </div>
                     </div>`;
-                });
-            })
-            .catch((error) => {
-                console.error(error);
-            })
-    }
+            });
+        })
+        .catch((error) => {
+            console.error(error);
+        })
 })
 
 
 searchInputRight.addEventListener("keyup", function (event) {
-    if (event.keyCode == 13) {
-        let search = searchInputRight.value;
-        fetch(`https://api.github.com/search/users?q=${search}&client_id=${clientId}&client_secret=${clientSecrets}`)
-            .then((response) => response.json())
-            .then((data) => {
-                let profileInfo = data.items[0].url
-                fetch(profileInfo).then((respon) => respon.json()).then((data) => {
-                    myName = data.login;
-                    followers = data.followers;
-                    following = data.following;
-                    profileImg = data.avatar_url;
-                    reposCount = data.public_repos;
-                    rightRepoCount = reposCount;
+    let search = searchInputRight.value;
+    fetch(`https://api.github.com/search/users?q=${search}&client_id=${clientId}&client_secret=${clientSecrets}`)
+        .then((response) => response.json())
+        .then((data) => {
+            let profileInfo = data.items[0].url
+            fetch(profileInfo).then((respon) => respon.json()).then((data) => {
+                myName = data.login;
+                followers = data.followers;
+                following = data.following;
+                profileImg = data.avatar_url;
+                reposCount = data.public_repos;
+                rightRepoCount = reposCount;
 
-                    rightContainer.innerHTML = `
+                rightContainer.innerHTML = `
                     <h1 id="right_result"></h1>
                     <img class="my_img" src=${profileImg} alt="" />
                     <div class="repo__item">
@@ -83,14 +80,14 @@ searchInputRight.addEventListener("keyup", function (event) {
                         <p>Public Repos: ${rightRepoCount}</p>
                       </div>
                     </div>`;
-                });
-            })
-            .catch((error) => {
-                console.error(error);
-            })
-    }
+            });
+        })
+        .catch((error) => {
+            console.error(error);
+        })
 })
 
+let celeb = document.querySelector(".confetti")
 VS.addEventListener("click", () => {
     let leftResult = document.getElementById("left_result")
     let rightResult = document.getElementById("right_result")
@@ -98,11 +95,18 @@ VS.addEventListener("click", () => {
         console.log("left win");
         leftResult.textContent = "Winner"
         rightResult.textContent = "Losser"
+        celeb.style.display = "block"
+
     }
     else if (leftRepoCount < rightRepoCount) {
         console.log("right win");
         rightResult.textContent = "Winner"
         leftResult.textContent = "Losser"
+        celeb.style.display = "block"
 
+    }
+    else {
+        rightResult.textContent = "Draw"
+        leftResult.textContent = "Draw"
     }
 })

@@ -19,8 +19,6 @@
 
     min-height: 48px;
 
-    /* gap:var(--control-medium-gap, 8px); */
-
     list-style: none;
 }
 
@@ -54,11 +52,6 @@
     border-bottom-color: rgba(175, 184, 193, 0.2);
     outline-offset: -2px;
     background-color: #7d85909c;
-
-/*
-border-bottom: 2px solid red;
-    border-radius: 0;
-*/
 }
 
 body a {
@@ -69,23 +62,12 @@ body a img {
     margin-right: 1rem;
 }
 
-/*
-.profile {
-    background-color: red;
-}
-*/
-
 body main {
     display: flex;
-
-    /* background-color: blue; */
 }
 
 #nav_section {
     display: flex;
-
-    /* justify-content: start; */
-
     justify-content: center
 }
 
@@ -98,8 +80,6 @@ body main {
 #icon_people {
     margin: 0;
     padding: 0;
-
-    /* border-radius: 0; */
 }
 
 .profile button {
@@ -132,16 +112,6 @@ body main {
     border: 1px solid black;
     background-color: red;
 }
-
-/*
-.my_card {
-    width: 25rem;
-    margin-left: 1rem;
-    margin: 50px;
-
-    background-color: red;
-}
-*/
 
 .public {
     width: 80px;
@@ -241,9 +211,6 @@ body main {
     z-index: 1;
 
     margin-top: 9px;
-
-    /* top: 50%; */
-
     margin-left: 7px;
 
     color: #4f5b66;
@@ -263,6 +230,14 @@ body main {
 
 .container-2:hover .icon {
     color: #93a2ad;
+}
+
+#my_name {
+    color: white;
+}
+
+.profile_following {
+    color: white;
 }
 
 /* Media */
@@ -577,4 +552,64 @@ body main {
 
 .light-mode .container-2:hover .icon {
     color: #93a2ad;
+}
+
+.light-mode #my_name {
+    color: black;
+}
+
+.light-mode .profile_following {
+    color: black;
+}
+
+ 
+/*
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+*/
+
+.switch-background {
+    width: 90px;
+    height: 40px;
+    margin-top: 0.5em;
+
+    transition: box-shadow 1s ease-in;
+
+    border-radius: 20px;
+    background-color: rgb(91, 56, 115);
+    box-shadow: 1px 1px 5px rgb(56, 32, 72) , -1px -1px 5px rgba( 212, 176, 235, 0.636);
+}
+
+.off-shadow {
+    box-shadow: 1px 1px 5px rgb(56, 32, 72) , -1px -1px 5px rgba( 212, 176, 235, 0.636);
+}
+
+.on-shadow {
+    box-shadow: 1px 1px 5px rgb(99, 17, 46) , -1px -1px 5px rgba( 255, 217, 245, 0.468);
+}
+
+.innerSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+    margin-top: 9px;
+    margin-left: 10px;
+
+    border-radius: 10px;
+    background-color: #6ef0e1;
+}
+
+.face {
+    width: 12px;
+    height: 12px;
+    padding-bottom: 2px;
 }
