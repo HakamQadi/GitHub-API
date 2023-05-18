@@ -643,4 +643,5 @@ body main {
     width: 12px;
     height: 12px;
     padding-bottom: 2px;
+    cursor: pointer;
 }
