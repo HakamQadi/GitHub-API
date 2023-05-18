@@ -25,7 +25,9 @@
 }
 
 .VS_img:hover {
-    transform: scale(1.5);
+    transform: scale(2);
+
+    /* transform: scale(1.2); */
 }
 
 .public {
@@ -130,12 +132,20 @@ body a {
     font-size: 1.5rem;
 }
 
+#VS_img:hover {
+    box-shadow: 5px 10px 14px rgba(255, 0, 0, 0.613);
+    transform: scale(1.2);
+    /* transform: scale(1.2); */
+}
 #VS_img {
     position: absolute;
     top: 22rem;
     left: 55rem;
 
     width: 10rem;
+
+    cursor: pointer;
+    transition: transform 0.3s ease;
 
     border-radius: 50%;
 }
@@ -504,6 +514,7 @@ body a {
     width: 27%;
     height: 70%;
     margin-top: 5rem;
+
     /* margin-left: 45rem; */
 }
 
