@@ -252,8 +252,13 @@ body main {
 
         border-radius: 50%;
     }
-    .explore{
+
+    .explore {
         display: none !important;
+    }
+
+    .language {
+        margin-top: 3px;
     }
 }
 
@@ -275,13 +280,43 @@ body main {
 
         border-radius: 50%;
     }
+
+    .reponame {
+        font-size: 13px;
+
+        line-break: anywhere;
+    }
+
+    .public {
+        font-size: 13px;
+    }
+
+    .container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        /* margin: 0 35%; */
+
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+
+    #repos_sectios {
+        display: flex !important;
+        justify-content: center;
+    }
 }
 
 @media(max-width: 425px) {
     * {
         font-size: 0.7rem;
     }
-
 
     .repo__item {
         width: 25rem;
@@ -291,6 +326,9 @@ body main {
         width: 9rem;
 
         border-radius: 50%;
+    }
+    #repos_sectios{
+        margin: 0 18%;
     }
 }
 
@@ -324,10 +362,13 @@ body main {
 
         border-radius: 50%;
     }
+
     .public {
         width: 57px;
         height: 20px;
+
         text-align: center;
+
         border: 1px solid #30363d;
         border-radius: 15px;
     }
@@ -560,8 +601,9 @@ body main {
     color: black;
 }
 
- 
-
+.light-mode #no_followers {
+    color: black;
+}
 
 .switch-background {
     width: 90px;

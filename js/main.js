@@ -14,6 +14,8 @@ let profileSection = document.querySelector(".profile")
 let reposSection = document.getElementById("repos_sectios")
 let myImg = document.getElementById("myImg");
 
+let followersPage = "followers.html"
+let followingPage = "following.html"
 
 searchInput.addEventListener("keyup", function (event) {
   if (event.keyCode == 13) {
@@ -21,10 +23,12 @@ searchInput.addEventListener("keyup", function (event) {
     fetch(`https://api.github.com/search/users?q=${search}&client_id=${clientId}&client_secret=${clientSecrets}`)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data.items[0]);
         let profileInfo = data.items[0].url
         fetch(profileInfo).then((respon) => respon.json()).then((data) => {
           myName = data.name;
           username = data.login;
+          localStorage.setItem("user", username)
           followers = data.followers;
           following = data.following;
           profileImg = data.avatar_url;
@@ -36,7 +40,7 @@ searchInput.addEventListener("keyup", function (event) {
         <div class="mb-3">
           <a
             class="text-secondary no-underline no-wrap"
-            href="https://github.com/imartinez?tab=followers"
+            href=${followersPage}
           >
             <img id="icon_people" src="icn/people.svg" alt="" />
             <span class="text-bold color-fg-default profile_following">${followers}</span>
@@ -45,7 +49,7 @@ searchInput.addEventListener("keyup", function (event) {
           ·
           <a
             class="text-secondary Link--secondary no-underline no-wrap"
-            href="https://github.com/imartinez?tab=following"
+            href=${followingPage}
           >
             <span class="text-bold color-fg-default profile_following">${following}</span>
             following
@@ -60,7 +64,7 @@ searchInput.addEventListener("keyup", function (event) {
         let repos = data.items[0].repos_url
         fetch(repos).then((response) => response.json()).then((data) => {
           for (let i = 0; i < 6; i++) {
-            console.log(data[i].language)
+            // console.log(data[i].language)
             reposSection.innerHTML += `
                         <div
           id="repos_sectios"

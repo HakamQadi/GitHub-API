@@ -1,0 +1,28 @@
+#follower_img {
+    width: 4rem;
+
+    border-radius: 50%;
+}
+
+.followers_cards button {
+    /* padding: 0 5px 0 5px; */
+
+    width: 4.5rem;
+    height: 30px;
+    margin-bottom: 1rem;
+
+    color: #bfd1d9;
+    border: 1px solid #dce9ee54;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #232b33;
+
+    /* text-align: center; */
+}
+
+#no_followers {
+    width: 20%;
+    margin: 20% 50%;
+
+    color: white;
+}
