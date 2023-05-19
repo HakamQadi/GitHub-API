@@ -276,7 +276,7 @@ body main {
     }
 
     #myImg {
-        width: 12rem;
+        width: 10rem;
 
         border-radius: 50%;
     }
@@ -311,6 +311,18 @@ body main {
         display: flex !important;
         justify-content: center;
     }
+
+    .profile button {
+        width: 20rem;
+    }
+
+    #my_name {
+        font-size: 20px;
+    }
+
+    .UnderlineNav-item {
+        font-size: 11px;
+    }
 }
 
 @media(max-width: 425px) {
@@ -323,12 +335,33 @@ body main {
     }
 
     #myImg {
-        width: 9rem;
+        width: 8rem;
 
         border-radius: 50%;
     }
-    #repos_sectios{
+
+    #repos_sectios {
         margin: 0 18%;
+    }
+
+    .profile button {
+        font-size: 1rem;
+    }
+
+    .mb-3 a {
+        font-size: 0.8rem!important;
+    }
+
+    #my_name {
+        font-size: 15px;
+    }
+
+    .UnderlineNav-item {
+        font-size: 8px;
+    }
+
+    .mb-3 a img {
+        width: 0.7rem!important;
     }
 }
 
@@ -643,5 +676,6 @@ body main {
     width: 12px;
     height: 12px;
     padding-bottom: 2px;
+
     cursor: pointer;
 }
