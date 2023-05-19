@@ -133,10 +133,13 @@ body a {
 }
 
 #VS_img:hover {
-    box-shadow: 5px 10px 14px rgba(255, 0, 0, 0.613);
     transform: scale(1.2);
+
+    box-shadow: 5px 10px 14px rgba(255, 0, 0, 0.613);
+
     /* transform: scale(1.2); */
 }
+
 #VS_img {
     position: absolute;
     top: 22rem;
@@ -238,6 +241,30 @@ body a {
     color: #93a2ad;
 }
 
+
+/* Styling the input field */
+
+.search_input {
+    font-size: 16px;
+
+    padding: 12px;
+
+    transition: #5b9dd9 0.3s ease;
+
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: #f7f7f7;
+}
+
+/* Styling the input field when it is in focus */
+
+.search_input:focus {
+    border: none;
+    border-bottom: 2px solid #f7f7f7;
+    outline: none;
+    background-color: #ccc;
+}
+
 /* media */
 
 @media(max-width: 1440px) {
@@ -334,30 +361,14 @@ body a {
 
         color: #fff;
     }
+
+    .container-2 input#search:focus,
+    .container-2 input#search:active {
+        width: 200px;
+    }
 }
 
-/* Styling the input field */
 
-.search_input {
-    font-size: 16px;
-
-    padding: 12px;
-
-    transition: #5b9dd9 0.3s ease;
-
-    border: none;
-    border-bottom: 2px solid #ccc;
-    background-color: #f7f7f7;
-}
-
-/* Styling the input field when it is in focus */
-
-.search_input:focus {
-    border: none;
-    border-bottom: 2px solid #f7f7f7;
-    outline: none;
-    background-color: #ccc;
-}
 
 @media(max-width: 425px) {
     #VS_img {
@@ -410,6 +421,11 @@ body a {
 
         color: #fff;
     }
+
+    .container-2 input#search:focus,
+    .container-2 input#search:active {
+        width: 180px;
+    }
 }
 
 @media(max-width: 375px) {
@@ -437,12 +453,25 @@ body a {
     .container-2 input#search {
         font-size: 8pt;
 
-        width: 162px;
+        width: 140px !important;
         margin-left: -0.5rem;
     }
 
     .container-2 .icon {
         margin-left: -0.1rem;
+    }
+
+    .container-2 input#search:focus,
+    .container-2 input#search:active {
+        width: 150px !important;
+    }
+
+    #right_result {
+        margin-left: 2.5rem;
+    }
+
+    #left_result {
+        margin-left: 2.5rem;
     }
 }
 
@@ -450,9 +479,9 @@ body a {
     #VS_img {
         position: absolute;
         top: 17rem;
-        left: 8.4rem;
+        left: 9rem;
 
-        width: 3rem;
+        width: 2rem;
     }
 
     .left_section .repo__item {
@@ -478,7 +507,7 @@ body a {
     .container-2 input#search {
         font-size: 7pt;
 
-        width: 125px;
+        width: 130px !important;
         margin-left: 0.5rem;
         padding-left: 32px;
     }
@@ -499,6 +528,19 @@ body a {
         margin-left: 1rem;
 
         color: #fff;
+    }
+
+    .container-2 input#search:focus,
+    .container-2 input#search:active {
+        width: 140px !important;
+    }
+
+    #right_result {
+        margin-left: 1.5rem;
+    }
+
+    #left_result {
+        margin-left: 1.5rem;
     }
 }
 
