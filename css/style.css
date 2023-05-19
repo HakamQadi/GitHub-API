@@ -289,6 +289,8 @@ body main {
 
     .public {
         font-size: 13px;
+        padding: 5px;
+
     }
 
     .container {
